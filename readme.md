@@ -1,6 +1,6 @@
-# Bangla Web Fonts
+# Banglabid – Bangla Web Fonts for WordPress
 
-**Bangla Web Fonts** is a lightweight WordPress plugin that enables beautiful and consistent rendering of Bangla (Bengali) text across all devices and browsers. It automatically applies a Bangla web font (Kalpurush) to your website, ensuring textbook-style typography and improved readability.
+**Banglabid** is a lightweight WordPress plugin that brings elegant and consistent Bangla (Bengali) typography to your website. With minimal setup, it automatically applies a beautiful Bangla web font (Kalpurush) that looks just like it does in textbooks — across all browsers and devices.
 
 ---
 
@@ -10,6 +10,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [FAQ](#faq)
+- [Contributing](#contributing)
 - [Credits](#credits)
 - [Changelog](#changelog)
 - [License](#license)
@@ -18,69 +19,91 @@
 
 ## Features
 
-- Embeds Bangla web fonts directly into your WordPress site.
-- Automatically applies the Kalpurush font site-wide.
-- Cross-browser and device-compatible.
-- Minimal configuration needed.
-- Clean and optimized for performance.
-- Works with most WordPress themes.
+- One-click activation — no setup required.
+- Automatically loads and applies the **Kalpurush** Bangla web font.
+- Ensures consistent and readable Bangla text across all devices.
+- Works seamlessly with most WordPress themes.
+- Clean and minimal code for fast performance.
 
 ---
 
 ## Installation
 
-### Method 1: Install via WordPress Admin Panel
+### Option 1: From WordPress Dashboard
 
-1. Navigate to **Plugins → Add New**
-2. Search for `Bangla Web Fonts`
-3. Click **Install Now**, then **Activate**
-4. You're done!
+1. Go to **Plugins > Add New**
+2. Search for **Banglabid**
+3. Click **Install Now** → **Activate**
 
-### Method 2: Manual Installation
+### Option 2: Manual Installation
 
-1. Download the latest release from [GitHub Releases](https://github.com/[your-repo-link]/releases)
-2. Upload the `.zip` file via **Plugins → Add New → Upload Plugin**
-3. Click **Install Now**, then **Activate**
-4. You're all set!
+1. Download the latest version from the [Releases](https://github.com/your-username/banglabid/releases)
+2. Upload the plugin folder to `/wp-content/plugins/`
+3. Activate the plugin from **Plugins > Installed Plugins**
 
 ---
 
 ## Usage
 
-Once the plugin is activated, it attempts to automatically apply the **Kalpurush** font site-wide.
-
-If the font is not applied automatically, you can manually force it by adding this line to your theme's CSS:
+After activation, **Banglabid** automatically applies the Kalpurush font to your site. If it doesn't appear to work (due to theme conflicts), add the following CSS to your theme's customizer or `style.css`:
 
 ```css
 body {
-  font-family: 'Kalpurush', Nunito, sans-serif !important;
+  font-family: 'Kalpurush', 'Nunito', sans-serif !important;
 }
 
-This will override default fonts and apply the Bangla font as intended.
+You can also apply it to specific elements:
+
+h1, h2, h3, p {
+  font-family: 'Kalpurush', sans-serif !important;
+}
 
 
 ---
 
 FAQ
 
-Q: How does this plugin work?
+Why isn't the font showing up?
 
-It loads the Kalpurush Bangla font and applies it to your site’s body content using WordPress hooks.
+Some themes override fonts with higher specificity. Use the manual CSS override (with !important) to enforce it.
 
-Q: Can I use a different Bangla font?
+Can I use a different Bangla font?
 
-At the moment, only Kalpurush is bundled. However, you can modify the plugin or use custom CSS to load other web-safe Bangla fonts.
+Currently, Kalpurush is the only bundled font. Future versions may support multiple font options.
 
-Q: Is it compatible with all themes?
+Will this slow down my website?
 
-Yes, it works with most modern themes. In case of conflicts, use the manual CSS method described above.
+Not at all! The plugin uses a single web font hosted locally, ensuring fast load times without relying on external CDNs.
+
+
+---
+
+Contributing
+
+Pull requests, issues, and feature suggestions are welcome!
+
+1. Fork the repository
+
+
+2. Create your branch: git checkout -b feature/your-feature
+
+
+3. Commit your changes: git commit -m 'Add some feature'
+
+
+4. Push to the branch: git push origin feature/your-feature
+
+
+5. Submit a pull request
+
+
 
 
 ---
 
 Credits
 
-Developer: Mohammad Sadi Jubair
+Author: Mohammad Sadi Jubair
 Email: sadibhaai@gmail.com
 Website: www.mohammadsadi.com
 Facebook: facebook.com/mohammadsadijubair
@@ -92,11 +115,11 @@ Changelog
 
 v1.0.0
 
-Initial release
+Initial release of Banglabid
 
-Kalpurush font embedding
+Kalpurush font integration
 
-Auto-apply to WordPress body text
+Auto-apply functionality for Bangla font
 
 
 
@@ -104,12 +127,17 @@ Auto-apply to WordPress body text
 
 License
 
-This plugin is open-source software licensed under the GNU General Public License v2 or later.
+This plugin is licensed under the GNU General Public License v2 or later.
 
 
 ---
 
-> Empower your Bangla content with elegant typography — across every screen and every platform.
+> Banglabid – Because your Bangla content deserves to look its best.
 
 
 
+---
+
+Let me know if you’d like help fixing the plugin code itself or adding support for font switching, Gutenberg integration, or Elementor compatibility.
+
+.
